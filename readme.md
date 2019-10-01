@@ -31,3 +31,7 @@ y = ax + b<br>
 # 分類問題
 - 評価指標：正答率(Accuracy)　どう正解するかは無視
 - 評価プロトコル：ホールドアウト
+- リーク(Leakage)：TrainingDataとTestDataの2分割で学習を繰り返すとTestDataにフィッティングしてしまう<br>
+                   結果的に元データ全て利用しているような状況になってしまう
+                  
+→最終評価を行うためのTestDataは学習に一切関わらず，新たに切り出したValidationDataによって最適化を行う
